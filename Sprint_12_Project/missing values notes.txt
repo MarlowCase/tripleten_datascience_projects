@@ -1,0 +1,12 @@
+1. Missing Completely at Random (MCAR):
+Definition: The probability of missing data on a variable is unrelated to any other observed or unobserved data. This is rare in real-world data.
+Example: A survey respondent accidentally skips a question, regardless of their other answers.
+Handling: Missing data can be safely imputed or dropped without introducing bias.
+2. Missing at Random (MAR):
+Definition: The probability of missing data on a variable is related to some of the observed data but not the missing data itself.
+Example: The likelihood of missing information about model could depend on vehicle_type and fuel_type but not on model itself.
+Handling: Imputation strategies based on the observed data (like grouping by vehicle_type and fuel_type to fill in missing model values) are appropriate.
+3. Missing Not at Random (MNAR):
+Definition: The probability of missing data is related to the value that is missing itself, meaning the missing data is systematically different from the observed data.
+Example: Older cars with lower prices and power might be more likely to have missing model values. Thus, the missingness might signal some underlying characteristic of these vehicles.
+Handling: Imputation can be more challenging, and introducing a new category like 'Unknown' might be a safer strategy to avoid making assumptions.

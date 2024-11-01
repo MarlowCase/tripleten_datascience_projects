@@ -1,0 +1,7 @@
+Understanding np.logspace and np.linspace:
+np.logspace(start, stop, num): This generates numbers that are evenly spaced on a logarithmic scale. It’s useful for exploring values that span several orders of magnitude (e.g., learning_rate, lambda). For example:
+np.logspace(-3, 0, 10) generates 10 values between 0.001 and 1 (e.g., [0.001, 0.002, 0.005, ..., 1]).
+Use this for hyperparameters where small changes can have large effects.
+np.linspace(start, stop, num): This generates numbers evenly spaced on a linear scale. It’s useful when you want a smooth range of values between two points (e.g., subsample, colsample_bytree).
+np.linspace(0.5, 1.0, 6) generates 6 values between 0.5 and 1.0.
+Use this for hyperparameters where you want a gradual exploration (e.g., subsampling percentages).
