@@ -28,3 +28,14 @@ Pandas, NumPy, Scipy, Matplotlib, Seaborn, Plotly, Requests, Beautiful Soup, Sci
 This repository is a portfolio of my data science projects completed during the TripleTen bootcamp, showcasing hands-on skills in data wrangling, visualization, model training, and deployment. 
 The projects cover a variety of domains, including predictive modeling, classification, regression, and time series forecasting.
 
+### How To Navigate
+To explore the projects, you can:
+1. **Click on any project link** in the table above to go directly to the folder for that project.
+2. **Browse the folders** above the table manually.
+
+Inside each project folder, you'll find:
+- Various files used in the project.
+- The main notebook (`.ipynb` file) containing the analysis, code, and results.
+
+Simply open the `.ipynb` file to view my work for that specific project. 
+
