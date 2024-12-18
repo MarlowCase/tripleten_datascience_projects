@@ -1,0 +1,68 @@
+SUMMARY OF EDA
+
+- According to the total data histograms (not broken by target class):
+    - A significant portion of the client base is opting for less expensive plans
+	- The number of clients with no internet more than doubles that of clients with just a single internet package - marketing should launch a campaign that bundles services together. 
+	- The tenure distributions are "U" shaped - implying that clients either churn early, or stay for extended periods. 
+	
+- According to the Numerical Feature distributions on the target class:
+    - There is a significant increase in monthly charges for those that have left vs. those who have not. 
+	- There is a significant decrease in total charges for churned vs. active: again reinforcing that those that leave, leave early. 
+	- Active clients have a median tenure of 3 years, and 75% of all clients that churned, did so within 2 years. 
+	- Active and Churned clients have the same median number of internet services: 2
+
+- According to Categorical Feature distributions on the target class:
+    Marketing should focus on our clients that are:
+	- subscribed on a **Monthly** basis;
+	- paying via **Electronic Check**;
+	- not set up for **automatic payments**;
+	- subscirbed to our **internet** with no additional packages;
+	- subscribed to our internet and have the **streaming tv and movies** packages as these packages have the highest churn rate.
+	- The marketing team should work hardest during **Quarters 3 & 4: Jul-Dec**.
+
+	As for our ML models:
+	- All fields will be great predictors of churn except for **Gender**, **Multiple Lines**, and possibly **Partner and Dependents** due to 
+		their uniform distributions. 
+	We will perform some additional testing to confirm `Partner` and `Dependents`, such as a Chi-squared test. 
+	
+	- performed chi-squared tests on certain categorical features and found gender to be independent of the target, as well as independent from 
+		senior_citizen, partner, dependents, and monthly_charges
+		
+- According to Distributions of the Target Class:
+	- There is a significant imbalance. The number of active clients more than doubles the amount of churned clients. 
+	- Due to robust parameter tuning methods, we are preicting that weight adjustments should suffice to address the imbalance. If not, 
+		then some combination of upsampling and downsampling via SMOTE may also work well. 
+
+- Distribution of Monthly Charges on the target class:
+    - Found that 4 different groups can be obtained from the histogram: 0-40, 40-70, 70-110, and 110+. Engineered a new feature with this data. 
+	
+- Percentages of Clients by Service Type:
+    - Most clients are subscribed to both internet and landline services. 
+	- Clients subscribed to internet services are considerably higher risk - internet satisfaction must be low.
+	- Fiber Optic is the most popular internet connection. 
+	- Clients subscribed to internet services tend to have 3 additional packages, followed by 2 and then 1.
+	- Observing the amount of internet services on the target class, we learned that clients are less likely to leave if subscribed to additional 
+		services, but it must be more than 4 to have a better churn rate than clients with no internet service at all. Marketing should introduce some new
+		incentivization. 
+
+- Customer Inflow and Outflow:
+    - The only departure data in the dataset is within the last 4 months. 
+	- No observable patterns in client subscription-start dates although we do have double the clients leaving than subscribing, perhaps competitors are
+		stealing our clients!
+		
+- Numerical Features Correlation Matrix:
+    - most correlations are positive, with the negative correlations only relating to the target
+	- tenure is our strongest predictor, followed by charge_group, and monthly_charges
+	- the engineered charge_group has a higher correlation than the original monthly_charges
+	
+- categorical Cramer's V Matrix:
+    - The strongest predictor appears to be `type of service`
+	- clients not on an auto-paymenmt are higher risk - payment method as a high moderate association
+	- gender has a non-existent assocation with every other feature
+	- quarter also has a weak association with other features, but has a moderate-strong association wiuth the target
+	- multiple_lines has low association witht the target, but moderate association with other features with moderate-strong association with the target
+	- Perfect association between payment_method and auto_payment; makes sense as one is a derivative of the other; will leave both features in data set
+	- All the internet services packages have a very strong association with each other. 
+	
+	- observed boxplot distributions of tenure_months and monthly_charges by gender on the target class as a final check to see if gender is related to 
+		highly correlated numerical features, but it is not. Safe to remove this feature from the dataset as it relates to nothing. 
