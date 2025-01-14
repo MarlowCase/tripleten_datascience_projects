@@ -22,6 +22,7 @@ Pandas, NumPy, Scipy, Matplotlib, Seaborn, Plotly, Requests, Beautiful Soup, Sci
 | [project_13](./Sprint_13_Project) | Predicting Taxi Orders at Airports: A Study of Time Series Forecasting Models | Data Wrangling, Time Series Analysis, Forecasting Models, Model Deployment |
 | [project_14](./Sprint_14_Project) | Sentiment Classification of IMDB Movie Reviews for Automated Content Moderation | EDA, Text Preprocessing, Text Feature Engineering (TF-IDF, BERT Embeddings), Bayesian Optimization, Model Deployment Preparation |
 | [project_15](./Sprint_15_Project) | Designing a Nueral Network for Age Verification | Data Visualization, Regression Model, Computer Vision |
+| [Final_Project](./Sprint_17_Project) | Customer Churn Prediction | Data Wrangling, Data Visualization, EDA, Advanced Imbalance Handling |
 
 ---
 
