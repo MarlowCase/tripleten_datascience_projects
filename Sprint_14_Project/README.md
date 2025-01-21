@@ -1,5 +1,5 @@
 # Introduction
-The Film Junky Union, a new edgy community for classic movie enthusiasts, is developing a system to automatically categorice movie reviews, helping classic movie enthusiasts quickly identify and engage with diverse perspective on their beloved films.
+The Film Junky Union, a new edgy community for classic movie enthusiasts, is developing a system to automatically categorize movie reviews, helping classic movie enthusiasts quickly identify and engage with diverse perspective on their beloved films.
 
 # Project Objective
 To build a high-performing classification model that accurately detects negative reviews **with an F1 score of at least 0.85,** enhancing the community's content moderation and streamlining the review filtering process. 
