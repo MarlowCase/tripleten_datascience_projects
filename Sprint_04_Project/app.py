@@ -1,13 +1,22 @@
 # Begin code for Sprint 4 project
 import streamlit as st
 import pandas as pd
+import os
 import plotly.express as px
 
 st.header('Sprint 4 Project - Vehicle Ads')
 
 # Load and Pre-Process Data
 filepath = 'vehicles_us.csv'
-unedited_df = pd.read_csv(filepath)
+st.write(f"Checking file path: {filepath}")
+st.write(f"File exists: {os.path.exists(filepath)}")
+
+if os.path.exists(filepath):
+    st.write("File found! Attempting to load...")
+    unedited_df = pd.read_csv(filepath)
+    st.write("File loaded successfully!")
+else:
+    st.error("Error: CSV file not found on Render!")
 
 @st.cache_data
 def pre_process(df_vhs):
