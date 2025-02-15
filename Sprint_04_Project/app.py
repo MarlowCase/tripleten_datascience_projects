@@ -8,15 +8,7 @@ st.header('Sprint 4 Project - Vehicle Ads')
 
 # Load and Pre-Process Data
 filepath = 'vehicles_us.csv'
-st.write(f"Checking file path: {filepath}")
-st.write(f"File exists: {os.path.exists(filepath)}")
-
-if os.path.exists(filepath):
-    st.write("File found! Attempting to load...")
-    unedited_df = pd.read_csv(filepath)
-    st.write("File loaded successfully!")
-else:
-    st.error("Error: CSV file not found on Render!")
+unedited_df = pd.read_csv(filepath)
 
 @st.cache_data
 def pre_process(df_vhs):
