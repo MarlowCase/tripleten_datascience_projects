@@ -6,7 +6,7 @@ import plotly.express as px
 st.header('Sprint 4 Project - Vehicle Ads')
 
 # Load and Pre-Process Data
-filepath = 'vehicles_us.csv'
+filepath = r'C:\Users\marlo\OneDrive\Desktop\Python_Work\Tripleten_Lessons\Sprint_04_Project\TT-Sprint_4_Project\vehicles_us.csv'
 unedited_df = pd.read_csv(filepath)
 
 @st.cache_data
